@@ -5,7 +5,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from accelerate import dispatch_model
 
 
-torch.cuda.set_per_process_memory_fraction(0.5)
+# torch.cuda.set_per_process_memory_fraction(0.5)
 
 app = Flask(__name__)
 CORS(app)
