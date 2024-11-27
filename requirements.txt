@@ -2,3 +2,4 @@ Flask
 torch
 transformers
 accelerate
+flask_cors
