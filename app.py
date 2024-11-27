@@ -5,7 +5,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from accelerate import dispatch_model
 
 
-# torch.cuda.set_per_process_memory_fraction(0.5)
+#torch.cuda.set_per_process_memory_fraction(0.5)
 
 app = Flask(__name__)
 CORS(app)
@@ -56,8 +56,6 @@ def generate_response():
             temperature=0.7,
             use_cache=True
         )
-
-        # Decode generated tokens
         generated_ids = [
             output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
         ]
