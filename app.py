@@ -17,7 +17,7 @@ model_name = "Qwen/Qwen2.5-1.5B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
-    device_map="auto"
+    device_map="cpu"
 )
 
 
